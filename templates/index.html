@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+       /* .logo {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+<!--        <header>-->
+<!--            <img src="{{ url_for('static', filename='logo.png') }}" alt="Healthify Logo" class="logo">-->
+<!--        </header>-->
+        <h1>Healthify</h1>
+        <form id="symptom-form">
+            <label for="symptoms">Enter your symptoms (comma-separated):</label>
+            <input type="text" id="symptoms" name="symptoms" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Results</h2>
+            <br>
+            <div id="disease"></div>
+            <h3>Description:</h3>
+            <p id="description"></p>
+            <h3>Precautions:</h3>
+            <ul id="precautions"></ul>
+            <h3>Medications:</h3>
+            <ul id="medications"></ul>
+            <h3>Workouts:</h3>
+            <ul id="workout"></ul>
+            <h3>Diets:</h3>
+            <ul id="diets"></ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
