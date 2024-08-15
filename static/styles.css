@@ -28,12 +28,10 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"] {
+.chosen-select {
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
 button {
